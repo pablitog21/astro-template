@@ -1,55 +1,73 @@
-# Astro Starter Kit: Basics
+# 🚀 **Astro Starter Kit: Basics**
+
+¡Bienvenido a tu nuevo proyecto con Astro! Usa este kit para comenzar rápidamente y explorar las bases del desarrollo con **Astro**.
+
+## 🌟 Comenzar con Astro
 
 ```sh
 npm create astro@latest -- --astro-template basics
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+[![Abrir en StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Abrir en CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Abrir en GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+> 🧑‍🚀 **¿Usuario experimentado?** Si ya conoces Astro, ¡puedes eliminar este archivo y comenzar directamente!
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+![Demo del proyecto básico](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-## 🚀 Project Structure
+---
 
-Inside of your Astro project, you'll see the following folders and files:
+## 📁 **Estructura del proyecto**
+
+Dentro de tu proyecto de Astro, encontrarás la siguiente estructura de carpetas:
 
 ```text
 /
-├── public/
+├── public/                # Archivos estáticos (favicon, imágenes, etc.)
 │   └── favicon.svg
-├── src/
-│   ├── components/
+├── src/                   # Código fuente del proyecto
+│   ├── components/        # Componentes de interfaz
 │   │   └── Card.astro
-│   ├── layouts/
+│   ├── layouts/           # Layouts reutilizables
 │   │   └── Layout.astro
-│   └── pages/
+│   └── pages/             # Páginas expuestas como rutas
 │       └── index.astro
-└── package.json
+└── package.json           # Configuración del proyecto y dependencias
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### 📌 **Notas importantes**:
+- Las páginas en la carpeta `src/pages/` se exponen como rutas según su nombre de archivo.
+- Los componentes pueden alojarse en `src/components/` para organizar tu interfaz.
+- Los archivos estáticos (imágenes, íconos) deben colocarse en la carpeta `public/`.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+---
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 🛠️ **Comandos útiles**
 
-## 🧞 Commands
+Ejecuta estos comandos desde la raíz del proyecto usando tu terminal:
 
-All commands are run from the root of the project, from a terminal:
+| **Comando**               | **Acción**                                         |
+|---------------------------|----------------------------------------------------|
+| `npm install`             | Instala las dependencias necesarias                |
+| `npm run dev`             | Inicia el servidor de desarrollo en `localhost:4321` |
+| `npm run build`           | Construye el sitio para producción en `./dist/`    |
+| `npm run preview`         | Previsualiza la versión de producción localmente   |
+| `npm run astro ...`       | Ejecuta comandos CLI como `astro add` o `astro check` |
+| `npm run astro -- --help` | Muestra ayuda para los comandos CLI de Astro       |
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## 📚 **¿Quieres aprender más?**
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-# astro-template
+Visita la [documentación oficial](https://docs.astro.build) o únete a nuestra [comunidad en Discord](https://astro.build/chat) para resolver dudas y compartir con otros desarrolladores.
+
+---
+
+## 💻 **Plantillas adicionales y soporte**
+
+Si buscas algo más que las bases, explora otras plantillas disponibles o agrega integraciones con `astro add`.
+
+---
+
+Este README no solo explica las funcionalidades básicas del proyecto, sino que también mejora la presentación general con una estructura clara y un enfoque atractivo para cualquier desarrollador.
