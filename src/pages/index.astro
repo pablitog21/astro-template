@@ -1,52 +1,21 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Skills from '../components/Skills.astro';
+import Projects from '../components/Projects.astro';
+import SocialNetworks from '../components/networks/SocialNetworks.astro';
+import Footer from '../components/Footer.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-  <main class="min-h-screen w-full bg-gradient-to-b from-gray-800 via-fuchsia-500 to-black flex flex-col items-center p-8 space-y-16">
+<script>
+  window.location.href = '/home';
+</script>
 
-    <!-- Barra de menú fija y con separación adecuada -->
-    <nav class="flex justify-around items-center bg-gradient-to-r from-fuchsia-500 to-indigo-600 p-3 rounded-full shadow-lg w-[350px] mx-auto transition-transform duration-500 hover:scale-105 fixed top-6 z-10">
-      <a href="#about" class="text-white text-sm font-semibold hover:text-indigo-300 transition duration-300">About me</a>
-      <a href="#skills" class="text-white text-sm font-semibold hover:text-indigo-300 transition duration-300">Skills</a>
-      <a href="#projects" class="text-white text-sm font-semibold hover:text-indigo-300 transition duration-300">Projects</a>
-    </nav>
-
-    <!-- Sección About Me -->
-    <section id="about" class="max-w-3xl text-center text-white space-y-4 pt-24">
-      <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-indigo-600">
-        About Me
-      </h2>
-      <p class="text-lg leading-relaxed">
-        I am a passionate developer specializing in building web and mobile apps using modern frameworks and tools. I love solving challenges and working on exciting projects.
-      </p>
-    </section>
-
-    <!-- Sección Skills -->
-    <section id="skills" class="max-w-3xl text-center text-white space-y-4">
-      <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-indigo-600">
-        Skills
-      </h2>
-      <div class="grid grid-cols-2 gap-4 text-lg">
-        <span>JavaScript</span>
-        <span>TypeScript</span>
-        <span>React</span>
-        <span>Flutter</span>
-        <span>Node.js</span>
-        <span>Spring Boot</span>
-      </div>
-    </section>
-
-    <!-- Sección Projects -->
-    <section id="projects" class="max-w-3xl text-center text-white space-y-4">
-      <h2 class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-indigo-600">
-        Projects
-      </h2>
-      <ul class="space-y-3">
-        <li class="transition-transform duration-300 hover:scale-105">🚀 <strong>Portfolio Website:</strong> A personal portfolio showcasing my work.</li>
-        <li class="transition-transform duration-300 hover:scale-105">📱 <strong>Task Tracker App:</strong> A mobile app for tracking daily tasks.</li>
-        <li class="transition-transform duration-300 hover:scale-105">🛠 <strong>E-commerce API:</strong> Backend API for a shopping platform.</li>
-      </ul>
-    </section>
+<Layout title="Astro Landing Page">
+  <Navbar />
+  <SocialNetworks />
+  <main class="min-h-screen w-full flex flex-col items-center p-8 space-y-16">
+    <Footer/>
   </main>
 </Layout>

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: 'class', // Habilita el modo oscuro mediante clases
   content: ['./src/**/*.{html,js,ts,jsx,tsx,astro}'],
   theme: {
     extend: {

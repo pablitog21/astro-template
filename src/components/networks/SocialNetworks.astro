@@ -1,0 +1,15 @@
+---
+import { NETWORKS } from "../../constants/constants";
+---
+<div class="fixed right-6 bottom-6 flex flex-col items-center space-y-3">
+  {NETWORKS.map((network) => (
+    <a 
+      href={network.url} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="transition-transform duration-300 hover:scale-110"
+    >
+      <img src={network.icon} alt={network.name} class="w-8 h-8 object-contain" />
+    </a>
+  ))}
+</div>
