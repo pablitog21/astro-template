@@ -9,38 +9,120 @@ import Footer from "../../components/Footer.astro";
   <div class="flex flex-col min-h-screen">
     <Navbar />
     <SocialNetworks />
-    <main
-      class="flex-grow w-full bg-gradient-to-b from-gray-800 via-fuchsia-500 to-black flex flex-col items-center p-8 space-y-16 pt-24"
-    >
-      <h1
-        class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-indigo-600"
-      >
-        Nosotros
+    <main class="flex-grow w-full bg-gradient-to-b from-gray-800 via-fuchsia-500 to-black flex flex-col items-center p-8 space-y-16 pt-24">
+      <h1 class="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-indigo-600">
+        Sobre Nosotros
       </h1>
-      <section>
-        <h2 class="text-2xl font-semibold text-center">¿Quiénes somos?</h2>
-        <p class="text-center text-lg text-gray-400 max-w-2xl ">
-          Somos una empresa dedicada a la venta de productos de belleza y cuidado
-          personal.
-        </p>
-        <!-- especifica que esperemos que se vea -->
-        <p class="text-center text-lg text-gray-400 max-w-2xl ">
-          Esperamos que te sientas cómodo y seguro con nosotros.
-        </p>
+
+      <!-- Sección Quiénes Somos -->
+      <section class="w-full max-w-4xl bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm">
+        <h2 class="text-3xl font-semibold text-center mb-6 text-fuchsia-300">¿Quiénes somos?</h2>
+        <div class="space-y-4 text-center">
+          <p class="text-lg text-gray-200">
+            Somos una empresa líder en el sector de la belleza y el cuidado personal, 
+            con más de 10 años de experiencia brindando productos de alta calidad.
+          </p>
+          <p class="text-lg text-gray-200">
+            Nuestra misión es ayudarte a realzar tu belleza natural con productos 
+            premium y asesoramiento personalizado.
+          </p>
+        </div>
       </section>
-      <section>
-        <h2 class="text-2xl font-semibold text-center">¿Qué esperamos de nosotros?</h2>
-        <p class="text-center text-lg text-gray-400 max-w-2xl ">
-          Esperamos que te sientas cómodo y seguro con nosotros.
-        </p>
+
+      <!-- Sección Valores -->
+      <section class="w-full max-w-4xl">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-fuchsia-300">Nuestros Valores</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm text-center">
+            <i class="fas fa-heart text-4xl text-fuchsia-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-white">Calidad</h3>
+            <p class="text-gray-300">
+              Seleccionamos cuidadosamente cada producto para garantizar los mejores resultados.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm text-center">
+            <i class="fas fa-leaf text-4xl text-fuchsia-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-white">Sustentabilidad</h3>
+            <p class="text-gray-300">
+              Comprometidos con el medio ambiente y productos cruelty-free.
+            </p>
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-lg backdrop-blur-sm text-center">
+            <i class="fas fa-users text-4xl text-fuchsia-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2 text-white">Comunidad</h3>
+            <p class="text-gray-300">
+              Creamos una comunidad que celebra la belleza en todas sus formas.
+            </p>
+          </div>
+        </div>
       </section>
-      <!-- donde estamos ubicados -->
-      <section>
-        <h2 class="text-2xl font-semibold text-center">¿Dónde estamos?</h2>
-        <p class="text-center text-lg text-gray-400 max-w-2xl ">
-          Estamos ubicados en la ciudad de México, en la colonia Roma.
-        </p>
+
+      <!-- Sección Ubicación -->
+      <section class="w-full max-w-4xl bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm">
+        <h2 class="text-3xl font-semibold text-center mb-6 text-fuchsia-300">Nuestra Ubicación</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div class="space-y-4">
+            <p class="text-lg text-gray-200">
+              <i class="fas fa-map-marker-alt text-fuchsia-400 mr-2"></i>
+              Av. Álvaro Obregón 123, Col. Roma Norte
+              <br />Ciudad de México, CP 06700
+            </p>
+            <p class="text-lg text-gray-200">
+              <i class="fas fa-clock text-fuchsia-400 mr-2"></i>
+              Horario: Lunes a Sábado
+              <br />10:00 AM - 8:00 PM
+            </p>
+            <p class="text-lg text-gray-200">
+              <i class="fas fa-phone text-fuchsia-400 mr-2"></i>
+              Tel: (55) 1234-5678
+            </p>
+          </div>
+          <div class="aspect-video w-full">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=..." 
+              class="w-full h-full rounded-lg"
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
       </section>
+
+      <!-- Sección Equipo -->
+      <section class="w-full max-w-4xl bg-gray-800/50 p-8 rounded-lg backdrop-blur-sm">
+        <h2 class="text-3xl font-semibold text-center mb-8 text-fuchsia-300">Nuestro Equipo</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="text-center">
+            <img 
+              src="/team/member1.jpg" 
+              alt="Miembro del equipo" 
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-white">Nombre del Miembro</h3>
+            <p class="text-gray-300">Cargo del Miembro</p>
+          </div>
+          <div class="text-center">
+            <img 
+              src="/team/member2.jpg" 
+              alt="Miembro del equipo" 
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-white">Nombre del Miembro</h3>
+            <p class="text-gray-300">Cargo del Miembro</p>
+          </div>
+          <div class="text-center">
+            <img 
+              src="/team/member3.jpg" 
+              alt="Miembro del equipo" 
+              class="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+            />
+            <h3 class="text-xl font-semibold mb-2 text-white">Nombre del Miembro</h3>
+            <p class="text-gray-300">Cargo del Miembro</p>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </main>
   </div>
