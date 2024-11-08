@@ -1,8 +1,7 @@
 [build]
-  publish = "dist"  # Ajusta esta ruta si tu proyecto se genera en otra carpeta, por ejemplo, "public" o similar
-  functions = "netlify/functions"
+  command = "npm run build"
+  publish = "dist" # o la carpeta de tu proyecto Astro que Netlify publique
 
-[[redirects]]
-  from = "/.netlify/functions/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+[functions]
+  directory = "netlify/functions"
+
