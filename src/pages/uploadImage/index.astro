@@ -47,7 +47,7 @@ import Layout from '../../layouts/Layout.astro';
     const statusMessage = document.querySelector('#statusMessage');
 
     try {
-      // Aquí cambias la URL para que apunte a la función de Netlify
+      // Cambié la URL para que apunte a la función en Netlify
       const response = await fetch('/.netlify/functions/upload', {
         method: 'POST',
         body: formData,

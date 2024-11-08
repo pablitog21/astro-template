@@ -55,4 +55,5 @@ app.post('/upload', upload.single('image'), async (req, res) => {
   }
 });
 
+// Exporta la función para Netlify
 module.exports.handler = serverless(app);

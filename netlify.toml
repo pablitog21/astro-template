@@ -1,7 +1,6 @@
 [build]
   command = "npm run build"
-  publish = "dist" # o la carpeta de tu proyecto Astro que Netlify publique
+  publish = "dist" # Ajusta según la configuración de Astro
 
 [functions]
   directory = "netlify/functions"
-
