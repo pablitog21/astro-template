@@ -1,0 +1,8 @@
+[build]
+  publish = "dist"  # Ajusta esta ruta si tu proyecto se genera en otra carpeta, por ejemplo, "public" o similar
+  functions = "netlify/functions"
+
+[[redirects]]
+  from = "/.netlify/functions/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
