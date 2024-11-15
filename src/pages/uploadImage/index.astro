@@ -1,0 +1,69 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+
+<Layout title="Subir Imagen">
+  <main class="min-h-screen w-full flex items-center justify-center bg-gradient-to-br from-purple-900 to-purple-700 p-8">
+    <div class="bg-gradient-to-br from-purple-900/90 to-purple-800/90 rounded-xl p-10 max-w-md w-full flex flex-col items-center gap-6 shadow-xl backdrop-blur-sm">
+      <h2 class="text-2xl font-bold text-white mb-2">Sube tu imagen</h2>
+      <form id="uploadForm" class="w-full flex flex-col items-center gap-6">
+        <div class="w-full">
+          <input 
+            type="file" 
+            name="image" 
+            id="imageInput"
+            required
+            accept="image/*"
+            class="block w-full text-sm text-gray-200
+                   file:mr-4 file:py-2.5 file:px-6
+                   file:rounded-full file:border-2
+                   file:border-purple-500/50
+                   file:text-sm file:font-semibold
+                   file:bg-purple-700/50 file:text-white
+                   hover:file:bg-purple-600/50
+                   file:transition-colors
+                   cursor-pointer"
+          />
+        </div>
+        <button 
+          type="submit" 
+          class="mt-2 px-8 py-3 bg-purple-600 text-white rounded-full 
+                 hover:bg-purple-500 transition-all duration-300 
+                 font-semibold shadow-lg hover:shadow-purple-500/25"
+        >
+          Subir Imagen
+        </button>
+      </form>
+      <p id="statusMessage" class="text-white mt-4"></p>
+    </div>
+  </main>
+</Layout>
+
+<script type="module">
+  document.querySelector('#uploadForm').onsubmit = async function (event) {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const statusMessage = document.querySelector('#statusMessage');
+
+    try {
+      // Aquí cambias la URL para que apunte a la función de Vercel
+      const response = await fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        const result = await response.json(); // Lee la respuesta JSON
+        statusMessage.textContent = result.message; // Muestra el mensaje del servidor
+        form.reset(); // Limpia el formulario
+      } else {
+        statusMessage.textContent = 'Error al subir la imagen';
+      }
+    } catch (error) {
+      console.error('Error al subir la imagen:', error);
+      statusMessage.textContent = 'Error al subir la imagen';
+    }
+  };
+</script>
+
